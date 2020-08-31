@@ -69,13 +69,14 @@ button {
 }
 
 input {
-  width: 100%;
+  width: 40%;
   height: 25px;
   margin-bottom: 20px;
+  display: block;
 }
 
 textarea {
-  width: 100%;
+  width: 40%;
   height: 60px;
 }
 
@@ -101,4 +102,9 @@ img {
 .lineThrough {
   text-decoration: line-through;
   color: red;
+}
+.form-element {
+}
+form {
+  padding: 30px;
 }

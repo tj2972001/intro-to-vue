@@ -13,7 +13,9 @@
     <div class="nav-bar"></div>
     <h1>Welcome To Vue-socks</h1>
     <div id="app">
-      <product :premium="premium" />
+      <p class="cart">Cart ({{cart}})</p>
+      <product @itemadded="cart++" :premium="premium" />
+      <!--Product component emits event called itemadded event-->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
