@@ -4,41 +4,16 @@
     <meta charset="UTF-8" />
     <title></title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div class="nav-bar"></div>
+    <h1>Welcome To Vue-socks</h1>
     <div id="app">
-      <div class="nav-bar"></div>
-      <div class="product">
-        <div class="product-image">
-          <img :src="image" alt="vueSocks" />
-        </div>
-        <div class="product-info">
-          <h3>{{product}}</h3>
-          <p v-if="inventory>10">In stock</p>
-          <p v-else-if="inventory<=10 && inventory>0 ">Almost sold out</p>
-          <p v-else :class="{lineThrough:!inStock}">Out of stock</p>
-          <ul>
-            <li v-for="detail in details">{{detail}}</li>
-          </ul>
-          <ul>
-            <li
-              v-for="varient in varients"
-              class="color-box"
-              :style="{backgroundColor:varient.varientColor}"
-              :key="varient.varientId"
-              @mouseover="changeImage(varient.varientImage)"
-            ></li>
-          </ul>
-          <button
-            @click="addToCart"
-            :disabled="!inStock"
-            :class="{disabledButton:!inStock}"
-          >
-            Add to cart
-          </button>
-          <p class="cart">Cart ({{cart}})</p>
-        </div>
-      </div>
+      <product :premium="premium" />
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>

@@ -2,6 +2,7 @@ body {
   font-family: tahoma;
   color: #282828;
   margin: 0px;
+  font-family: "Lato", sans-serif;
 }
 
 .nav-bar {
@@ -90,7 +91,7 @@ textarea {
 
 /***************/
 
-ul {
+.color-ul {
   list-style: none;
 }
 img {
